@@ -43,7 +43,7 @@ main {
 nav {
     padding-right: 30px;
     justify-content: space-between;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
 }
 
 .middle-nav :not(:last-child) {
@@ -195,13 +195,12 @@ input::-webkit-input-placeholder {
 }
 
 @media only screen and (max-width: 1040px) {
-    body {
-        overflow: hidden;
-    }
     nav,
     main {
         flex-direction: column;
-        margin: 0px 10px;
+        margin: 0px 0px;
+        text-align: center;
+        padding-right: 0px;
     }
 
     .brand-text {
@@ -209,6 +208,20 @@ input::-webkit-input-placeholder {
     }
     .right-nav {
         justify-content: space-evenly;
+    }
+    .middle-nav {
+        padding-right: 10px;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .middle-nav :not(:last-child) {
+        padding-right: 1%;
+    }
+    .right-nav :not(:last-child) {
+        padding-right: 12%;
+    }
+    form {
+        text-align: center;
     }
     .responsive {
         display: none;
@@ -232,13 +245,24 @@ input::-webkit-input-placeholder {
         margin: 8px 0;
         padding: 18px 0px;
         padding-left: 45px;
+        margin: auto;
     }
-    .form-container a {
-        /* padding-top: 8px;
-        padding-bottom: 8px;
-        padding-left: 20px;
-        padding-right: 5px;
-        border-radius: 200px; */
-        font-size: 0.2rem;
+    .icon-a {
+        display: none;
+    }
+    .icon-b {
+        display: none;
+    }
+    main section {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #button-design-grey,
+    #button-design-purple {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    .im {
+        font-size: 1.3rem;
     }
 }
