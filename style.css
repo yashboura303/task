@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Alata", sans-serif;
 }
@@ -11,7 +14,8 @@ ul {
     list-style: none;
 }
 
-.container-flex,
+/* NAVIGATION */
+nav,
 main {
     margin: 0px 80px;
 }
@@ -19,7 +23,7 @@ main {
 .color-text {
     color: blueviolet;
 }
-.container-flex {
+nav {
     margin-top: 20px;
 }
 .brand-text {
@@ -27,32 +31,21 @@ main {
     margin-top: 10px;
     font-weight: 300;
 }
-.container-flex,
+nav,
 .right-nav,
 .middle-nav,
 .form-container,
 main {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
-.container-flex {
+nav {
+    padding-right: 30px;
     justify-content: space-between;
     flex-flow: row wrap;
 }
-.container-flex ul {
-    box-sizing: border-box;
-    margin-bottom: -100px;
-}
-nav {
-    padding-right: 30px;
-}
 
-.middle-nav li {
-    padding-bottom: 0;
-    display: inline-block;
-}
 .middle-nav :not(:last-child) {
     padding-right: 12%;
 }
@@ -75,9 +68,6 @@ nav {
     width: 100%;
 }
 .middle-nav a:hover {
-    color: blueviolet;
-}
-.middle-nav li:hover {
     color: blueviolet;
 }
 .right-nav :not(:last-child) {
@@ -103,6 +93,7 @@ nav {
     box-shadow: 0px 3px 5px rgb(138, 43, 226, 0.4);
 }
 
+/* MAIN SECTION */
 .hero-text {
     font-size: 3rem;
     font-weight: 300;
@@ -126,7 +117,6 @@ input[type="text"] {
     outline: none;
     padding: 18px 0px;
     padding-left: 45px;
-    box-sizing: border-box;
     transition: 0.3s;
 }
 input[type="text"]:focus {
@@ -178,9 +168,7 @@ input::-webkit-input-placeholder {
     margin-left: 40px;
     font-size: 1.2rem;
 }
-#button-design-purple span {
-    margin-bottom: -10px;
-}
+
 #button-design-grey {
     color: blueviolet;
     background-color: rgb(245, 244, 247);
@@ -200,9 +188,57 @@ input::-webkit-input-placeholder {
 }
 
 .responsive {
-    /* width: 780px; */
     margin-left: 50px;
     object-fit: contain;
     width: 100%;
     height: auto;
+}
+
+@media only screen and (max-width: 1040px) {
+    body {
+        overflow: hidden;
+    }
+    nav,
+    main {
+        flex-direction: column;
+        margin: 0px 10px;
+    }
+
+    .brand-text {
+        text-align: center;
+    }
+    .right-nav {
+        justify-content: space-evenly;
+    }
+    .responsive {
+        display: none;
+    }
+    .hero-text {
+        font-size: 2rem;
+        font-weight: 250;
+    }
+    .hero-caption {
+        font-size: 0.9rem;
+        margin-top: -10px;
+    }
+    .form-container a {
+        font-size: 0.4rem;
+    }
+    .icon-loc {
+        display: none;
+    }
+    input[type="text"] {
+        width: 76%;
+        margin: 8px 0;
+        padding: 18px 0px;
+        padding-left: 45px;
+    }
+    .form-container a {
+        /* padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 20px;
+        padding-right: 5px;
+        border-radius: 200px; */
+        font-size: 0.2rem;
+    }
 }
